@@ -1,0 +1,42 @@
+.add-card {
+    width: min(90%, 100rem);
+    margin-inline: auto;
+    text-align: center;
+}
+
+.add-card .form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    align-items: center;
+}
+
+.add-card .form .input-field {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.add-card .form .input-field input {
+    padding: .1em .5em;
+    border-radius: .5em;
+    border: none;
+    width: 100%;
+}
+
+.add-card .form button {
+    margin-top: 2em;
+    cursor: pointer;
+    border: 2px solid var(--primary-white-clr);
+    padding: .1em 1em;
+    border-radius: .5em;
+    background-color: transparent;
+    color: var(--primary-white-clr);
+    transition: 0.3s ease;
+}
+
+.add-card .form button:is(:hover, :focus-visible) {
+    background-color: var(--primary-white-clr);
+    color: var(--primary-black-clr);
+}

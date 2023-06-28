@@ -1,0 +1,36 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-fw: 700;
+  --secondary-fw: 400;
+  --paragraph-fs: clamp(.5rem, .5rem + 3vw, 2rem);
+  --head-fs: clamp(2rem, 2rem + 8vw, 5rem);
+  --primary-black-clr: hsl(0, 0%, 8%);
+  --primary-white-clr: hsl(0, 0%, 97%);
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: var(--head-fs);
+  letter-spacing: 5px;
+}
+
+input, button {
+  font-family: 'Alegreya', serif;
+  font-size: var(--paragraph-fs);
+}
+
+.app {
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: 'Alegreya', serif;
+  font-size: var(--paragraph-fs);
+  background-color: var(--primary-black-clr);
+  color: var(--primary-white-clr);
+  display: grid;
+  place-items: center;
+}

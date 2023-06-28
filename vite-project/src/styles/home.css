@@ -1,0 +1,40 @@
+.home {
+    width: min(90%, 100rem);
+    margin-inline: auto;
+    text-align: center;
+}
+
+.home .two-links {
+    margin-top: 2em;
+    font-size: var(--paragraph-fs);
+}
+
+.home .two-links > .link {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-white-clr);
+    padding: .5em 2em;
+    border-radius: .5em;
+    transition: 0.3s ease;
+}
+
+.home .two-links > .link:first-child {
+    border: 2px solid var(--primary-white-clr);
+}
+
+.home .two-links > .link:first-child:is(:hover, :focus-visible) {
+    border-radius: 0;
+    border: 2px solid transparent;
+    border-bottom: 2px solid var(--primary-white-clr);
+}
+
+.home .two-links > .link:last-child {
+    margin-left: 1em;
+    background-color: var(--primary-white-clr);
+    color: var(--primary-black-clr);
+}
+
+.home .two-links > .link:last-child:is(:hover, :focus-visible) {
+    background-color: transparent;
+    color: var(--primary-white-clr);
+}
