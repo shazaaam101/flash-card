@@ -1,0 +1,43 @@
+.flash {
+    margin-top: 1em;
+}
+
+.flash.correct {
+    color: var(--correct-clr);
+}
+
+.flash.wrong {
+    color: var(--wrong-clr);
+}
+
+.flash .icon {
+    margin-left: .25em;
+}
+
+.flash form > input {
+    margin-top: .75em;
+    padding: .1em .5em;
+    border-radius: .5em;
+    border: none;
+    width: 100%;
+}
+
+.flash .timeout-bar-wrapper {
+    border-radius: 1em;
+    height: 2rem;
+}
+
+.flash .timeout-bar-wrapper .timeout-bar {
+    border-radius: inherit;
+    height: 100%;
+    transform: scaleX(1);
+    transform-origin: center;
+    background-color: var(--primary-white-clr);
+    animation: decrease 2.5s forwards linear;
+}
+
+@keyframes decrease {
+    to {
+        transform: scaleX(0);
+    }
+}

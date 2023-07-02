@@ -10,15 +10,24 @@ const AddCard = () => {
 
   const handleAddCard = async (e) => {
     e.preventDefault();
-    const category_id = categoryRef.current.value;
+    const category_id = categoryRef.current.value.toLowerCase();
+    const title = document.querySelector(".add-card-title");
     try {
+      title.classList.add("completed");
+      setTimeout(() => {
+        title.classList.remove("completed");
+      }, 1000);
       await setDoc(doc(collectionRef, category_id), {
-        category: categoryRef.current.value,
+        category: category_id,
       });
       await addDoc(collection(db, `cards/${category_id}/children`), {
         question: questionRef.current.value,
         answer: answerRef.current.value,
       });
+
+      categoryRef.current.value = "";
+      questionRef.current.value = "";
+      answerRef.current.value = "";
     } catch (err) {
       console.error("Error at add card:", err);
     }
@@ -27,7 +36,7 @@ const AddCard = () => {
   return (
     <div className="add-card">
       <header>
-        <h1>ADD CARD</h1>
+        <h1 className="add-card-title">ADD CARD</h1>
       </header>
       <form className="form" onSubmit={handleAddCard}>
         <div className="input-field">

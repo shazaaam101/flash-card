@@ -1,0 +1,25 @@
+.flash-card {
+    width: min(90%, 50rem);
+    margin-inline: auto;
+}
+
+.flash-card .summary {
+    margin-top: 2em;
+}
+
+.flash-card .summary .back-btn {
+    margin-top: 1em;
+    cursor: pointer;
+    display: inline-block;
+    padding: .5em 2em;
+    border: 2px solid var(--primary-white-clr);
+    background-color: transparent;
+    color: var(--primary-white-clr);
+    border-radius: .5em;
+    transition: 0.3s ease;
+}
+
+.flash-card .summary .back-btn:is(:hover, :focus-visible) {
+    background-color: var(--primary-white-clr);
+    color: var(--primary-black-clr);
+}

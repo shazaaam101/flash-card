@@ -4,6 +4,14 @@
     text-align: center;
 }
 
+.add-card .add-card-title {
+    transition: 0.3s ease;
+}
+
+.add-card .add-card-title.completed {
+    color: var(--correct-clr);
+}
+
 .add-card .form {
     margin-top: 1em;
     display: flex;

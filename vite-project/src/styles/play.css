@@ -1,0 +1,10 @@
+.play {
+    width: min(90%, 70rem);
+    margin-inline: auto;
+}
+
+.play .wrapper-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+}

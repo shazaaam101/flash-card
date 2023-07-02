@@ -11,6 +11,8 @@
   --head-fs: clamp(2rem, 2rem + 8vw, 5rem);
   --primary-black-clr: hsl(0, 0%, 8%);
   --primary-white-clr: hsl(0, 0%, 97%);
+  --correct-clr: #50C878;
+  --wrong-clr: #ff0033;
 }
 
 h1 {
@@ -33,4 +35,9 @@ input, button {
   color: var(--primary-white-clr);
   display: grid;
   place-items: center;
+}
+
+.loading {
+  margin-top: 1em;
+  text-align: center;
 }
